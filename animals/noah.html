@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"</script></script>
+        <script>
+
+            function setup() {
+                createCanvas(800, 600)
+            }
+
+            function draw() {
+
+                // custom drawing code below
+                background(255)
+                triangle(110, 10, 10, 100, 210, 100)
+                rect(30, 100, 160, 300)
+                circle(80, 140, 1)
+                circle(140, 140, 1)
+                curve(30, 100, 60, 200, 160, 200, 190, 100)
+
+
+                for(let i = 40; i < 200; i+=10) {
+                   bezier(i, 400, i - 30, 450, i + 30, 500, i - 30, 550)
+                   bezier(i - 30, 550, i + 30, 600, i - 30, 650, i, 700)
+                }
+            bezier(60, 400, 30, 450, 90, 500, 30, 550)
+            bezier(30, 550, 90, 600, 30, 650)
+               
+            }
+        </script>
+    </head>
+</html>
+<body>
+    A squid...?
+    <main>
+    </main>
+</body>
+
+</html>
