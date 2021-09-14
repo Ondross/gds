@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script>
+
+      function setup() {
+        createCanvas (800,500);
+        noCursor();
+      }
+
+      function draw () {
+        background (0, 105, 148)
+        circle(mouseX, mouseY, 8); strokeWeight (0); fill(255, 83, 73)
+
+        triangle(350,105,388,50,426,105)
+        rect(360,105,55,120); fill(255, 83,73)
+        rect(360, 170, 15, 150, 20)
+        rect(380, 185, 15, 150, 20)
+        rect(400,178,15,150,20)
+
+        ellipseMode(RADIUS);
+        fill(255);
+        ellipse(370,200,10,10);
+        ellipseMode(CENTER);
+        fill(0,0,0);
+        ellipse(370,200,10,10);
+
+        ellipseMode(RADIUS);
+        fill(255,83,73);
+        ellipse(405,200,10,10);
+        ellipseMode(CENTER);
+        fill(0,0,0);
+        ellipse(405,200,10,10);
+
+        ellipseMode(RADIUS);
+        fill(211,199,162);
+        ellipse(400,470,600,70);
+        ellipseMode(CENTER);
+        fill(211,199,162);
+        ellipse(400,470,600,70);
+
+
+    }
+
+    {rect(100,9,99,100)}
+        
+     
+
+    </script>
+  </head>
+  <body>
+    Squidstifer
+    <main>
+    </main>
+  </body>
+</html>
