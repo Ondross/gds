@@ -1,0 +1,71 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+
+     function setup()  {
+         createCanvas(800,600)
+     }
+
+     function draw()  {
+        background(0, 0, 150)
+        
+
+        let h = color(105,105,105) //head+body colo
+        fill(h)
+        noStroke()
+        ellipse(100,100,65,100) //body
+
+        let e = color(255,255,255) //color of eyes
+        fill(e) 
+        noStroke()
+        circle(80,80,16) //eyes
+        circle(115,80,16)
+
+        let p = color(0,0,0) //pupil color
+        fill(p)
+        noStroke()
+        circle(78,80,10)//pupils
+        circle(113,80,10)
+
+        stroke(105,105,105) //color of the line
+        strokeWeight(15) //thickness
+        line(75,120, 45, 200) //tentacles
+        line(90, 120, 70, 210)
+        line(100, 120, 100, 210)
+        line(110, 120, 130, 210)
+        line(125, 120, 155, 210)
+
+        let hat = color(0,0,0) //tophat
+        fill(hat)
+        noStroke()
+        rect(75, 50, 50, 8)
+        rect(87,20,25,30)
+
+        let m = color(176, 224, 230) //monocle color
+        fill(m)
+        noStroke()
+        strokeWeight(2.5) //thickness of monocle outline
+        stroke(255,215,0) //monlce outline color
+        circle(113, 80, 23) //monocle
+
+        let bow = color(0,0,0)
+        fill(bow)
+        noStroke()
+        circle(100,120,18)
+
+        fill('black')
+        triangle(100, 120, 76, 130, 76, 110)
+        triangle(99, 120, 124, 130, 124, 110)
+        
+
+     }
+
+    </script>
+ </head>
+ <body>
+     Please dont sue me Mr. Gates
+    <main>
+    </main>
+ </body>
+</html>
