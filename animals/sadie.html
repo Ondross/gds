@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"> </script>
+        <script>
+
+        function setup(){
+            createCanvas(800,600)
+        }
+
+        function draw(){
+            //ocean
+            background(50, 157, 168)
+            //tentacles
+            stroke(245, 142, 236)
+            strokeWeight(10)
+            noFill()
+            curve(460, 320, 400, 370, 350, 500, 490, 420);
+            curve(280, 280, 340, 350, 310, 490, 260, 500);
+            curve(360, 280, 360, 350, 320, 495, 280, 350);
+            //main body
+            fill(245, 142, 236);
+            stroke(191, 113, 184);
+            strokeJoin(ROUND);
+            quad( 440, 270, 365,250, 310 , 360, 413, 400);
+            rectMode()
+            //top triangle
+            triangle(425,200, 350 , 250, 450, 290)
+            fill(245, 142, 236)
+            stroke(191, 113, 184)
+            strokeWeight(5)
+            //eyes
+            fill(235)
+            stroke(235)
+            circle(340, 345, 17)
+            circle(400, 365, 17)
+            fill(0)
+            stroke(0)
+            circle(342, 345, 13)
+            circle(398, 364, 13)
+            //dots
+            stroke(191, 113, 184)
+            circle(370, 280, 5)
+            circle(400, 260,3)
+            circle(390, 240, 4)
+            circle(420, 340, 4)
+            circle(410, 320, 3)
+            
+            
+            
+        }
+        </script>
+    </head>
+    <body>
+        Sasparilla the Squid
+        <main>
+        </main>
+    </body>
+</html>
