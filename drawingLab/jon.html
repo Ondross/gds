@@ -1,0 +1,51 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script src="LinkedList.js"></script>
+   <script>
+    let xPos = []
+    let yPos = []
+    let xPos0 = []
+    let yPos0 = []
+    
+     function setup() {
+        createCanvas(800, 600)
+        background(100, 100, 60)
+     }
+     function mouseDragged() {
+        noStroke()
+        xPos.push(mouseX)
+        yPos.push(mouseY)
+        for(let i = 0; i < xPos.length; i++){ 
+            let p = color(i,i,i)
+            fill(p)
+            circle(xPos[i],yPos[i],10)
+            if (xPos.length>256) {
+                let c = color(100, 100, 60)
+                fill(c)
+                circle(xPos[0], yPos[0], 12)
+                xPos.shift()
+                yPos.shift()
+            }
+        }
+    }
+    function keyPressed(){
+        if (key == ' '){ 
+            stroke(255, 0, 100)
+            xPos0.push(mouseX)
+            yPos0.push(mouseY)
+            for(let i = 0; i < xPos0.length; i++){
+                if(i > 0){
+                    line(xPos0[i], yPos0[i], xPos0[i - 1], yPos0[i-1])
+                }
+            }
+        }
+    }
+   </script>
+ </head>
+ <body>
+   Jon-Shop
+   <main>
+   </main>
+ </body>
+</html>

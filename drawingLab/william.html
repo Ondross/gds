@@ -1,0 +1,34 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+
+       let xvalues = []
+       let yvalues = [] 
+     function setup() {
+         createCanvas(10000, 600)
+     }
+ 
+     function draw() { 
+ 
+	  background("black")
+        
+        yvalues.push(mouseY)
+        xvalues.push(mouseX)
+        for(let i = 0; i < xvalues.length; i++){
+            circle(xvalues[i] + Math.random()*40, yvalues[i] + Math.random()*40, Date.now()/200%300)
+        }
+     fill(Date.now()/200%255, 29 , 206)
+     
+        
+     } 
+
+ 
+   </script>
+ </head>
+ <body>
+   Drawing Machine lab
+   <main>
+   </main>
+ </body>
+</html>

@@ -1,0 +1,49 @@
+<html> 
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script>
+        function setup() {
+            createCanvas (800,500);
+        }
+
+        let colorChanged = false
+        let colors=[]
+        let xs = []
+        let ys = []
+            
+        function draw () {
+            if (!(mouseX || mouseY)) {
+                return
+            }
+            background(255)
+            xs.push(mouseX)
+            ys.push(mouseY)
+            colors.push(colorChanged)
+
+            for(let i = 0; i < xs.length; i++){
+                if(colors[i]){
+                    stroke(255)
+                    strokeWeight(20)
+                } else {
+                    stroke(0)
+                    strokeWeight(5)
+                }
+
+                line(xs[i-1], ys[i-1], xs[i], ys[i])
+            }
+        }
+        function doubleClicked () {
+            if(colorChanged == false) {
+                colorChanged = true
+            } else {
+                colorChanged = false
+            }
+        }
+    </script>
+</head>
+<body>
+    Bootleg MS Paint ;)
+  <main>
+  </main>
+</body>
+</html>

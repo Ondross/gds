@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+        <script>
+            mouseXValues = []
+            mouseYValues = []
+
+            function setup()  {
+                createCanvas(800, 600)
+                strokeWeight(5)
+            }
+
+            function draw()  {
+                background(225)
+                mouseXValues.push(mouseX)
+                mouseYValues.push(mouseY)
+                
+                for(let i = 0; i < mouseXValues.length; i++) {
+                    red = Math.sqrt((0 - mouseXValues[i - 1])**2 + (0 - mouseYValues[i -1])**2) / 600 * 255
+                    green = Math.sqrt((800 - mouseXValues[i - 1])**2 + (0 - mouseYValues[i -1])**2) / 600 * 255
+                    blue = Math.sqrt((0 - mouseXValues[i - 1])**2 + (600 - mouseYValues[i -1])**2) / 600 * 255
+                    stroke(red, green, blue)
+                    line(mouseXValues[i], mouseYValues[i], mouseXValues[i - 1], mouseYValues[i - 1])
+                  
+                // line(10, 10, 20, 10) --> arbitraty and brittle
+                // i = incrementer = add 1
+                // i starts at 1
+                // Math.sqrt(9) = 3
+                // 3**2 = 9
+                // Math.sqrt((x2 -x1)**2 + (y2 - y1)**2)
+                }
+            }   
+
+        </script>
+    </head>
+    <body>
+        Fun Times At Ridgemont High
+        <main>
+        </main>
+    </body>
+</html>

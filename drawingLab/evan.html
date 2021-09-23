@@ -1,0 +1,57 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+ 
+     function setup() {
+         createCanvas(800, 600)
+     }
+     
+    let xPositions = []
+    let yPositions = []
+
+    function draw() {
+ 
+    // All your custom drawing code should live underneath here
+      background(255)
+
+        xPositions.push(mouseX)
+        yPositions.push(mouseY)
+
+        if(xPositions.length > 100){
+          xPositions.shift()
+          yPositions.shift()
+        }
+
+        stroke(0, 255, 255)
+
+        for(let i = 0; i < xPositions.length; i++){
+            if(i > 0 && mouseIsPressed){
+                line(xPositions[i], yPositions[i], xPositions[i - 1], yPositions[i-1])
+            }
+
+            if(keyIsPressed === true){
+              circle(xPositions[i], yPositions[i], 20)
+            }
+        }
+
+        fill(0, 0, 0)
+
+        if(!mouseIsPressed){
+          xPositions = []
+          yPositions = []
+        }
+
+   // and above here.
+       // By the way, what do you think the arguments to the “line” function are?
+       // I’ll give you a hint. The first two are “starting x” and “starting y”
+     } 
+ 
+   </script>
+ </head>
+ <body>
+   Bad Microsoft Paint Clone
+   <main>
+   </main>
+ </body>
+</html>

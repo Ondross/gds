@@ -1,0 +1,51 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+ // might have overcommented a bit, but can't hurt :)
+     function setup() {
+         createCanvas(800, 600)
+     }
+
+     let randColor = [] // random array with three values, each between 0 and 255 inclusive (for RGB)
+     let strokeThick = Math.floor(Math.random() * 25)
+     let mouseCoords = []
+
+     for(let i = 0; i <= 3; i++) { // generating random colors
+       randColor.push(Math.floor(Math.random() * 256))
+       console.log(randColor)
+     }
+
+     function mouseDragged() {
+         strokeWeight(strokeThick) // new color and stroke weight
+         stroke(randColor[0], randColor[1], randColor[2]) 
+
+         if (mouseCoords != null) { // if mouseCoords is empty, add new x and y values before drawing the line
+           line(mouseCoords[0], mouseCoords[1], mouseX, mouseY) 
+           }
+         mouseCoords = [mouseX, mouseY] // update mouse position
+     }
+
+     function mouseReleased() { // get rid of point in array to break up lines
+       mouseCoords = ["break"]
+       randColor = []
+       strokeThick = ""
+
+       for(let i = 0; i <= 3; i++) { // new random color and stroke weight for the next line
+         randColor.push(Math.floor(Math.random() * 256))
+         console.log(randColor)
+         }
+
+       strokeThick = Math.floor(Math.random() * 25)
+       console.log(strokeThick)
+       }
+
+
+   </script>
+ </head>
+ <body>
+   The world's least useful MS Paint clone
+   <main>
+   </main>
+ </body>
+</html>

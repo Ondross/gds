@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+
+        <script>
+        
+        function setup() {
+            createCanvas(1800, 600)
+            strokeWeight(5)               
+
+        }
+
+        let xPosition = []
+        let yPosition = []
+
+
+        let value = 0
+        function draw() {
+            background(255)
+
+            stroke(100, 100, 50);
+
+             if (mouseX + mouseY > 1000) {
+                stroke(224, 25, 95)
+            }
+
+            else {
+                stroke(18, 150, 20)
+            }
+           
+            if (mouseIsPressed){
+            
+            xPosition.push (mouseX)
+            yPosition.push (mouseY)
+
+            }
+
+ 
+            for (let i = 1; i < xPosition.length; i++) {
+                if (i>0) {
+                    line(xPosition[i], yPosition[i], xPosition[i-1], yPosition[i-1])
+
+                }
+            }
+        }
+
+
+        function mousePressed() {
+            xPosition = []
+            yPosition = []
+            xPosition.push ()
+            yPosition.push ()
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Create a one-line masterpiece!</h1>
+        <p>Careful not to lift your pen...</p>
+
+        <main>
+        </main>
+     
+    </body>
+
+</html>
