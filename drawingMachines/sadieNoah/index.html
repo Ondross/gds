@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js">
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class="header">Drawing Telephone
+            <img id = "logo" src= "https://docs.google.com/drawings/d/e/2PACX-1vTJmoVits6DUS2Lo4q5Cj8Z3CV8NVE9QB-83-Yq9W4MGHTeuFPqnwBMBY_Jf7GFesj46N9SDhPMz5w0/pub?w=658&h=656" width = "60px" height = "auto">
+        </div>
+        <div style="display:flex">
+            <div id="prompt-div">Let's get started</div>
+            <div id="counter-div"></div>
+        </div>
+        <div id='players-form'> Choose the number of players:
+        <select name="players" id="num-players">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <button id="submit-players"> Start!</button>
+        </div>
+        <main  style ="display: flex;">
+            <div id = "pallete">
+                <!--<div class = "brush-size">-->
+                    <div class= "button-div"><button id="brush-big" class= "button"> Big </button></div>
+                    <div class= "button-div"><button id="brush-med" class= "button"> Medium </button></div>
+                    <div class= "button-div"><button id="brush-sml" class= "button"> Small </button></div>
+                <!--</div>
+                <div class= "brush-color" style = "margin-top: 10px;">-->
+                    <div class= "button-div"><button id="brush-black" class= "button"> Black </button> </div>           
+                    <div class= "button-div"><button id="brush-red" class= "button"> Red </button></div>
+                    <div class= "button-div"><button id="brush-green" class= "button"> Green </button></div>
+                    <div class= "button-div"><button id="brush-blue" class= "button"> Blue </button></div>
+                <!--</div>--> 
+            </div>
+        </main>
+        <script src="drawgame.js">
+    </script>
+    <script src="assembled.js">
+    </script>
+    </body>
+</html>

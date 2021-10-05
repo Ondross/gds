@@ -1,0 +1,78 @@
+<html> 
+  <head>
+   
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <link rel="stylesheet" href ="idek-styles.css"/>
+    <link rel="stylesheet" href="drawingStyles.css"/>
+    <script>
+
+    
+        function setup() {
+            let cnv = createCanvas(1200,600)
+            cnv.position(118,136)
+            background(255)
+        }
+    
+        function draw() {
+          
+            if (mouseIsPressed) {
+                const point = {
+                    x: mouseX,
+                    y: mouseY,
+                }
+                currentPath.push(point)
+            }
+            fill(0,0,0,0)
+            paths.forEach(path => {
+                beginShape()
+                path.forEach(point => {
+                    vertex(point.x, point.y)
+                })
+                endShape()
+            })
+        }
+    
+        function mousePressed() {
+            currentPath = []
+            paths.push(currentPath)
+        }
+    
+
+    
+
+    </script>
+    </head>
+<body>
+    <div id="yourprompt">
+        Your Prompt:
+        <div id="prompt">
+        </div>
+    </div>
+    <div id="yourguess">
+        Your Guess:
+        <input id='input'/> <!-- make input look prettier-->
+    </div>
+    <div id="timeleft">
+        TIME LEFT:
+        <span id="timer"></span>
+    </div><br>
+    <div id = "my-div">
+        
+        <div id = "canvas"></div>
+        <div id = "line1"></div>
+        <div id = "line2"></div>
+        <div id= "horizontal1"></div>
+        <div id= "horizontal2"></div>
+        <div id= "rbox1"></div>   
+        <div id= "rbox2"></div>
+        <div id= "rbox3"></div>
+
+
+
+    </div>
+    
+  <main>
+  </main>
+</body>
+<script src="timer.js"> </script> 
+</html>

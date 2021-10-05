@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+        <link rel="stylesheet" href="drawingStyles.css"/>
+        <script>
+                
+                let paths = []
+                let currentPath = []
+                let imageList = []
+                let drawingMode = true
+
+                function setup() {
+                    createCanvas(400,400)
+                    background(255)
+                    button = createButton('save')
+                    button.position (10,40)
+                    button.mousePressed(saveBoard)
+                    
+                    
+                    // button = createButton('input save')
+                    // button.position (10, 100)
+                    // button.mousePressed(saveInput)
+
+                    button = createButton('Clear Canvas')
+                    button.position(10,70)
+                    button.mousePressed(clearBoard)
+
+                    button = createButton('Done')
+                    button.position (10,100)
+                    button.mousePressed(done)
+                }
+
+                function draw() {
+                   
+
+                    if (mouseIsPressed) {
+                        const point = {
+                            x: mouseX,
+                            y: mouseY,
+                        }
+                        currentPath.push(point)
+                    }
+
+                    fill(0,0,0,0)
+            
+                    paths.forEach(path => {
+                        beginShape()
+                        path.forEach(point => {
+                            vertex(point.x, point.y)
+                        })
+                        endShape()
+                    })
+                }
+
+                function mousePressed() {
+                    currentPath = []
+                    paths.push(currentPath)
+                }
+
+                function clearBoard(){
+                    console.log('hi')
+                    background(255)
+                    paths = []
+                }
+
+                function saveBoard(){
+                    if (!drawingMode) {
+                        return saveInput();
+                    }
+                    drawingMode = false   
+
+                     var board = document.getElementById('defaultCanvas0');
+
+                    board.toBlob(function(blob) {
+                        var newImg = document.createElement('img'),
+                        url = URL.createObjectURL(blob);
+
+                        newImg.onload = function() {
+                            // no longer need to read the blob so it's revoked
+                            URL.revokeObjectURL(url);
+                        };
+
+                        newImg.classList.add("image")
+
+                        newImg.src = url;
+                        //document.body.appendChild(newImg);
+                        imageList.push(newImg)
+
+                    });
+
+                    document.getElementById('defaultCanvas0').style.display = "none"
+                    document.getElementById('input').style.display = "block"
+                    
+                    //document.getElementById('defaultCanvas0').style.display = "block"
+                    //document.getElementById('input').style.display = "none"
+                    // move save function to after imput function , multiple drawings puh in array
+
+                    
+                }
+
+                function saveInput(){
+                   
+                    background(255)
+                    paths = []
+
+                    drawingMode = true
+
+                    var savedInput = document.getElementById('input').value
+                    console.log("input saved", savedInput)
+
+                    imageList.push(savedInput)
+
+                    document.getElementById('defaultCanvas0').style.display = "block"
+                    document.getElementById('input').style.display = "none"
+                }
+
+                function done(){
+                    for (let i = 0; i < imageList.length; i++){
+                        if (i%2 == 0) {
+
+                            document.body.appendChild(imageList[i]);
+
+                        }
+                        else {
+                            var newDiv = document.createElement('div')
+                            newDiv.innerHTML = imageList[i]
+                            document.body.appendChild(newDiv)
+                        }
+                        
+                    }
+                }
+
+
+                   
+
+
+
+        </script>
+    
+    </head>
+
+    <body>
+        
+        <input id='input'/>
+       
+        <main>
+        </main>
+    </body>
+</html>

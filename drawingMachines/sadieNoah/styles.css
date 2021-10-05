@@ -1,0 +1,87 @@
+*{
+    background-color: #F1F1EF;
+    font-family: "Fira code";
+    color: black;
+}
+.header{
+    font-size: 36px;
+}
+
+/*#brush-red:focus{
+    background: red;
+    color:white;
+}
+#brush-black:focus{
+    background: black;
+    color:white;
+}
+#brush-blue:focus{
+    background: blue;
+    color:white;
+}
+#brush-green:focus{
+    background: green;
+    color:white;
+}
+*/
+canvas{
+    border: solid black;
+    margin-top: 20px;
+}
+
+#counter-div{
+    position: relative;
+    background-image: url("https://docs.google.com/drawings/d/e/2PACX-1vRLXebUmaoriW84eN0aKRFtT3aAa9uzs7ZJkWDFpeFZoI0imFuMrsXd618rhp-EGBKcTkUMdGsoxVLL/pub?w=576&h=569");
+    background-size: cover;
+    padding: 10px;
+    height: 50px;
+    background-position: center;
+    width: 50px;
+    margin-left: 700px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+.button-div{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 60px;
+    width: 40px;
+}
+
+button {
+    text-align: center;
+    font-size:16px;
+    padding: 5px, 10px;
+    width: 80px;
+}
+
+#brush-med{
+    background: #595950;
+    color:white;
+}
+
+#brush-black{
+    background: #595950;
+    color:white;
+}
+
+#prompt-div{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 24px;
+}
+
+.image{
+    width : 300px;
+    height: auto;
+    border: solid black;
+}
+
+#logo{
+    vertical-align: text-bottom;
+    margin:0;
+    padding: 0 10px;
+}
