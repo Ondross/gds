@@ -1,0 +1,102 @@
+<html style = "transform: scale(.9); overflow: hidden;">
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+       <script src="maze.js"></script>
+       <script>
+           
+           // Variables 
+            x = 0
+            y = 50
+            xVelocity = 0
+            yVelocity = 0
+            timer = 40
+            youLost = false
+            textAlignment = 820
+            youWon = false
+            xValues = []
+            yValues = []
+            
+            function setup()  {
+                createCanvas(1050, 600)
+                strokeWeight(5)
+                textSize(42)
+            }
+            
+            function draw()  {
+                background(0)
+
+               // x = xVelocity + x
+                //y = yVelocity + y
+
+
+                circle(x, y, 20)
+                
+                // Cosmetics
+                stroke("white")
+                text(timer, textAlignment, 100)
+            
+                // Runs timer if you lost and you won are both false.
+                let runTimer = !youWon && !youLost
+                if (frameCount % 60 == 0 && timer > 0 && runTimer) {
+                    timer --
+                }
+                // If the timer is equal to zero print "Game Over"
+                if(timer == 0) {
+                    text("Game Over", textAlignment, 200)
+                }
+                // If you pass 800 and youLost is false it prints "You Won"
+                if (x >= 800 && !youLost || youWon) {
+                  youWon = true
+                    text("You won", textAlignment, 200)
+                }
+
+                // Stores x values in List.
+                xValues.push(x)
+                yValues.push(y)
+                
+                // Draws Maze
+                stroke("blue")
+                drawMaze()
+                
+                // Collision detection.
+                if(get(x, y)[0]===0 || youLost) {
+                    text("Gameover", textAlignment, 200)
+                    youLost = true
+                }
+               // Creates line where circle has been.
+                for(let i = 0; i < xValues.length; i++){
+                    stroke("red")
+                    line(xValues[i], yValues[i], xValues[i - 1], yValues[i - 1])
+                }
+                
+                fill(255, 0, 0)
+                circle(x, y, 15)
+  
+                if (keyIsDown(LEFT_ARROW)) {
+                    x = x - 2
+                     }
+                if (keyIsDown(RIGHT_ARROW)) {
+                x = x + 2
+                     }
+                 if (keyIsDown(UP_ARROW)) {
+                 y = y - 2
+                  }
+                if (keyIsDown(DOWN_ARROW)) {
+                 y = y + 2
+                    }              
+        
+                    var audio = new Audio('Pac-Man Original (Arcade 1980)');
+                        audio.play();
+            
+            } 
+
+
+        </script>
+    </head>
+    <body>
+    
+        <main >
+
+        </main>
+    </body>
+</html>

@@ -2,7 +2,7 @@ let currentBoard = 1;
 let currentPlayer = 1;
 let numOfPlayers = 4;
 let finalPrompt;
-let time = 30;
+let time = 10;
 
 document.getElementById('submit-players').onclick = function(){
     numOfPlayers = document.getElementById('num-players').value;

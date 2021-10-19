@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        *{font-family: Lato, sans-serif;}
+        #title{font-family: "Limelight"; font-size: 80px;}
+        #big-container{display: flex;}
+        #left-div{width:40%; padding: 25px;}
+        #right-div{width:60%;}
+        #body{font-size: 25px; padding-top: 20px}
+        #text-div{font-size: 16px; line-height: 1.5; padding: 75px;}
+        #image{background-image: url(https://docs.google.com/drawings/d/e/2PACX-1vQKcQopPEiMrUXk89V1CQTT6UfdqE8Pg1MrJc4aJUoQT7XjI3zxfOZMjtcyi57aXpLrF65zwWfit8j7/pub?w=816&h=984);
+                background-position: center top;
+            background-repeat: no-repeat; 
+            background-size: cover;
+            height: 800px;
+            width: 800px;
+            background-size: auto;}
+        #button{border: 2px solid #FFC60B; font-size: 25px; background: white; width: 100px; text-align: center; margin-top: 20px}
+        .radio {padding-right: 15px; }
+        #form { padding-top: 10px;}
+    </style>
+</head>
+<body>
+<div id = "big-container">
+    <div id = "left-div">
+        <div id = "title">Bernie Speech-a-nator</div>
+        <div id = "body">Get Bernie started! Choose a seed word to get a computer generated speech.</div>
+        <div id = 'form'>
+        <form>
+        <input type = "radio" name = 'type' value = 'go' class = "radio" id = "one-percent"><label>1 percent</label>
+        <input type = "radio" name = 'type' value = 'create-input' class = "radio" id = "15-an-hour"><label>$15 an hour</label>
+        <input type = "radio" name = 'type' value = 'create-input' class = "radio" id = "billionaires"><label>Billionaires</label>
+        <input type = "radio" name = 'type' value = 'create-input' class = "radio" id = "random"><label>Pick one for me!</label>
+        </form>
+        </div>
+        <button id = "button">Go</button>
+
+    </div>
+    <div id = "right-div">
+        <div id = "image"><div id = 'text-div'></div></div>
+    </div>
+</div>
+<script src = "sadie.js">
+</script>
+
+</body>
+</html>
