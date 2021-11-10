@@ -1,0 +1,145 @@
+*{
+    font-family: 'Poppins';
+}
+
+#title{
+    font-weight: bold;
+    font-size: 48px;
+    width:400px;
+    margin: auto;
+}
+
+#inputs{
+    font-weight: normal;
+    display:flex;
+    font-size: 20px;
+    width:310px;
+    margin:auto;
+    
+}
+
+#labels #boxes{
+    display: block;
+    
+}
+
+#labels{
+    margin-right: 10px;
+}
+
+#button{
+    background-image: url(https://static.thenounproject.com/png/11587-200.png);
+    background-position: center top;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+}
+
+#submit{
+    display: flex;
+    margin:auto;
+    width: 100px;
+    height: 250px;
+}
+
+input[type=text] {
+    border: 3px solid #407BFF;
+    font-size: 14px;
+}
+
+#thanks-div{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+#affirmation{
+    font-size: 48px;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+}
+
+#names-heading-div{
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+#names-body-div{
+    border: 1px solid black;
+    width: 500px;
+    padding: 15px;
+}
+
+#all-names-div{
+    margin: 10px 20px 30px 20px;
+}
+#by-date-div{
+    margin: 10px 20px;
+}
+.date-div{
+    font-size: 18px;
+}
+
+.names-div{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 480px){
+    html{
+        width: 100%;
+    }
+    
+    #content{
+        margin:auto;
+        width: 100%;
+    }
+    #title{
+        font-size: 50px;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    #labels{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    #inputs{
+        width: auto;
+    }
+    #boxes{
+        width: 200px;
+        padding-left: 25px;
+    }
+    #button{
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+    }
+    
+    #submit{
+        display: flex;
+        margin:auto;
+        width:200px;
+        font-size: 30px;
+
+    }
+    input[type=text] {
+        font-size: 20px;
+        width:200px;
+    }
+
+    #thanks-div{
+        font-size: 80px;
+        margin-top: 400px;
+    }
+
+    #affirmation{
+        font-size: 40px;
+    }
+}

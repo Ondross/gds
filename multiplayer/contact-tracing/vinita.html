@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script type="module" src="firebase.js"></script>
+        <script type = 'module' src="vinita.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        *{
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        #form{
+            display: block;
+            margin:auto;
+            width: 300px;
+        }
+        #form input{
+            border: 1px solid black;
+        }
+        #title{
+           text-align:center;
+           width: auto;
+           font-family: 'Poppins', sans-serif;
+        }
+        #sub-title{
+            font-size: 20px;
+            font-weight: normal;
+            padding: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id = 'content'>
+            <div id="title">
+                Contact Tracing Portal
+                <div id = 'sub-title'>Fill out information about the relevent person and time frame. </div>
+            </div>
+            
+            <div id='form'>
+                
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+
+                <!--<label for="email">Email:</label>
+                <input type="text" id="email" name="email"><br><br>-->
+                
+                <label for="start">Start date:</label>
+                <input type="date" id="start" name="trip-start" value = '2021-11-05'><br><br>
+
+                <label for="start">End date:</label>
+
+                <input type="date" id="end" name="trip-end" value = '2021-11-06'><br><br>
+                
+            </div>
+                <div id='submit'> 
+                Submit
+                <div id='button'></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
