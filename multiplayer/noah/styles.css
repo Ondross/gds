@@ -1,0 +1,76 @@
+/* 
+@media (min-width/max-width: __px) {
+    body {
+        do this;
+    }
+} 
+*/
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fafafa;
+}
+
+.word {
+    float: left;
+    margin-right: 5px;
+}
+
+.score {
+    float: right;
+    margin-left: 5px;
+    color: #99c24d;
+}
+
+.container {
+    display: flex;
+}
+
+#input {
+    display: flex;
+    column-gap: 3px;
+    margin-bottom: 10px;
+}
+
+#main-ui {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+#game-timer {
+    font-size: 30px;
+    flex-direction: row;
+    margin-right: 5px;
+}
+
+#player-timer {
+    margin-right: 5px;
+    flex-direction: row;
+}
+
+#player-score {
+    color: #99c24d;
+    flex-direction: row;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+#input-area {
+    display: flex;
+}
+
+#input {
+    margin-right: 5px;
+    flex-direction: row;
+}
+
+#player-timer {
+    flex-direction: row;
+    margin-left: 5px;
+}
+
+#error {
+    color: #f15025;
+}

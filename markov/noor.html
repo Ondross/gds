@@ -1,0 +1,171 @@
+<html>
+
+<head>
+    <style>
+    body {
+        background-color : green;
+        text-align: center;
+        position:relative;
+         top: 20px
+        
+    }
+    #header {
+        font-size: 50px;
+
+        font-family: "Lucida Handwriting", cursive
+    }
+
+    #p {
+      color: white;
+      font-size: x-large;
+    }
+
+    #newP{
+        font-size: x-large;
+    }
+
+    #markovResults{
+        font-size: x-large;
+        
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1 id = "header">Hobbit Name Generator!</h1>
+        
+        <p id = "p" >Do you want to know your hobbit name?</p>
+        <p id = "newP">
+            Press the button see what it is!
+        </p>
+        <button id="generate"> Generate </button>
+        <p></p>
+        <div>
+            <p id="markovResults"></p>
+        </div>
+    <!-- <div>
+            <h2>Input text here! <button onclick="markovMe()">Click me to generate text!</button></h2>
+              <textarea id="inputBox" rows="1" cols="10"></textarea>
+               
+              </div>
+
+        <div>
+            <p id="markovResults"></p>
+        </div>
+ -->
+</body>
+
+<script src=Independence.js></script>
+
+<script>
+
+var hobbitFirstNames = "Adaldrida Adamanta Adelard Asphodel Andwise Angelica Bell Belladonna Berylla Bilbo Bingo Bob Bodo Bowman Bucca Bungo Camellia Carl Celandine Chica Daisy Diamond Dinodas Doderic Dodinas Donnamira Dora Drogo Dudo Eglantine Falco Faramir Fastolph Fastred Ferdinand Ferumbras Ferumbras Filibert Fíriel Flambard Folco Fortinbras Fortinbras Fosco Fredegar Frodo Frodo Gilly Goldilocks Gorbadoc Gorbulas Gorhendad Gormadoc Griffo Halfast Hamfast Hilda Hildigrim Hob Hobson Holfast Holman Hugo Ilberic Isembard Isengar Isengrim Isumbras Lalia Largo Lee Lily Linda Lobelia Longo Lotho Madoc Malva Marmadas Marmadoc Marroc May Melilot Menegilda Mentha Meriadoc Merimac Merimas Merry Milo Mimosa Minto Mirabella Moro Mosco Mungo Myrtle Nob Odo Odovacar Olo Orgulas Otho Paladin Pansy Pearl Peony Pervinca Pimpernel Pippin Polo Porto Posco Poppy Primrose Primula Prisca Reginard Robin Rorimac Rosamunda Rose Rowan Ruby Rudigar Rufus Sadoc Salvia Samwise Sancho Saradoc Seredic Sigismond Tanta Ted Tobold Togo Tolman Cotton Wilcom Wilibald Wiseman"
+var hobbitLastNames = "Gorbadoc Gorbulas Gorhendad Orgulas Otho Paladin Dinodas Doderic Dodinas Samwise Sancho Brandybuck Took Baggins Burrows Bullroarer Bolger Baggins Sandyman Hornblower Goodbody Cotton Gardner Roper Proudfoot Cotton Marish Boffin Fairbairn Maggot Greenholm bolger Fairbairn Hildifons Hildigrim Gamgee Gammidge brandybuck"
+function generateName(inputNames){
+    
+    let firstNames = inputNames.split(' ');
+    let order = 2;
+    let ngrams = {};
+    let beginnings = [];
+
+
+    function pleaseWork() {
+        for (let j = 0; j < firstNames.length; j++) {
+            let txt = firstNames[j];
+            for (let i = 0; i <= txt.length - order; i++) {
+                let gram = txt.substring(i, i + order);
+                if (i == 0) {
+                    beginnings.push(gram);
+                }
+
+                if (!ngrams[gram]) {
+                    ngrams[gram] = [];
+                }
+                ngrams[gram].push(txt.charAt(i + order));
+            }
+
+
+        }
+
+        console.log(ngrams)
+    }
+
+    function markovIt() {
+
+        let currentGram = beginnings[Math.floor(Math.random() * beginnings.length)]
+        let result = currentGram;
+
+        for (let i = 0; i < 8; i++) {
+            let possibilities = ngrams[currentGram];
+            if (!possibilities) {
+                break;
+            }
+            let next = possibilities[Math.floor(Math.random() * possibilities.length)]
+            result += next;
+            let len = result.length;
+            currentGram = result.substring(len - order, len);
+        }
+
+        return result
+    }
+    pleaseWork()
+    return markovIt()
+}
+
+function generate() {
+    const first = generateName(hobbitFirstNames)
+    const last = generateName(hobbitLastNames)
+
+    document.getElementById('markovResults').innerHTML = first + " " + last
+}
+
+document.getElementById('generate').onclick = generate
+    
+</script>
+
+
+<!-- <script>
+
+        function markovMe() {
+            const markovChain = {}
+            const textArr = independence.split(' ')
+            let order = 2;
+            console.log(textArr)
+
+            for (let i = 0; i < textArr.length; i++) {
+                let word = textArr[i].toLowerCase().replace(/[\W_]/, "")
+             if (!markovChain[word]) {
+                markovChain[word] = []
+                markovChain[word].push(i, i+1)
+              }
+             else{ 
+                  markovChain[word].push(textArr[i + 1], "");
+                  //markovChain[word].push(textArr[i + 1].toLowerCase().replace(/[\W_]/, ""));
+
+                }
+
+            console.log(markovChain)
+        }
+
+        const words = Object.keys(markovChain)
+            let word = words[Math.floor(Math.random() * words.length)]
+            let result = ''
+            for (let i = 0; i < words.length; i++ ) {
+              result += word + ' ';
+            newWord =  markovChain[word][Math.floor(Math.random() * markovChain[word].length)]
+              word = newWord;
+             if (!word || !markovChain.hasOwnProperty(word)) word = words[Math.floor(Math.random() * words.length)]
+            }
+                document.getElementById('markovResults').innerText = result;
+                }
+
+    
+    </script> -->
+
+
+
+
+
+
+</html>
