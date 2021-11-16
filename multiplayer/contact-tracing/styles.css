@@ -18,9 +18,14 @@
     
 }
 
-#labels #boxes{
-    display: block;
-    
+.input {
+    display: flex;
+    padding: 10px;
+}
+
+#boxes{
+    display: flex;
+    flex-direction: column;
 }
 
 #labels{
@@ -90,6 +95,11 @@ input[type=text] {
     padding: 10px;
 }
 
+.label {
+    flex: 0 0 120px;
+    padding-top: 5px;
+}
+
 @media only screen and (max-width: 480px){
     html{
         width: 100%;
@@ -113,8 +123,7 @@ input[type=text] {
         width: auto;
     }
     #boxes{
-        width: 200px;
-        padding-left: 25px;
+        margin: auto;
     }
     #button{
         width: 40px;

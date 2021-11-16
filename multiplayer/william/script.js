@@ -57,7 +57,7 @@ class Draggable {
        })
     }
 
-    solved() {
+    isCorrect() {
         let solved = this.x === this.xSolution && this.y === this.ySolution
         if (solved) {
             console.log(this.id)
@@ -151,7 +151,7 @@ window.draw = function() {
             draggable.update()
             draggable.show()
         }) 
-        if (draggableImages.every(img => img.solved())) {
+        if (draggableImages.every(img => img.isCorrect())) {
             console.log("DONE")
         }
     }
