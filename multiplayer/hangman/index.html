@@ -1,0 +1,55 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <!--this sets up the hangman logo image-->
+
+        <img src = "https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/001/955/original/hangman.png" alt = "failed to load">
+
+        <!--this is the div where the word (or the dashes if the letters haven't been chosen) will be-->
+        <div id = "wordBox" class = "bigText">
+
+        </div>
+
+        <!--this is the div where the text telling the user how many incorrect guesses they've made is-->
+        <div id = "numWrongGuesses" class = "mediumText">
+
+        </div>
+
+        <!--this is where the letters that have already been guessed will appear-->
+        <div id = "guessedLetters" class = "mediumText">
+            
+        </div>
+
+        <!--this is where the text telling the players they've either won or lost will appear (I know the naming kinda sucks
+            should have been endResultBox or something. At least it works)-->
+        <div id = "victoryBox" class = "bigText">
+            
+        </div>
+
+        <!--this is where the 'confetti' gif or the 'you suck' gif will appear after the players either win or lose
+        again the naming isn't great but it works-->
+        <div id = "victoryImg">
+            
+        </div>
+
+        <!--this is the input box where the players will put the letters they are guessing-->
+        <input id = "inputBox" maxlength=1>
+        
+        <br><br>
+
+        <!--this is the button that lets the players restart the game-->
+        <input id = "restartGame" type = "button" value = "RESTART GAME">
+
+    </body>
+
+    <!--this imports all the modules that are needed-->
+    <script src = "firebase2.js" type="module"></script>
+    <script src = "words.js" type="module"></script>
+    <script src = "logic.js" type="module"></script>
+    <link rel = "stylesheet" href = "formatting.css">
+    
+</html>

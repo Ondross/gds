@@ -1,0 +1,13 @@
+/*
+these just define classes that make the text in the divs either big or medium
+*/
+
+.bigText{
+    font-size: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.mediumText{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
