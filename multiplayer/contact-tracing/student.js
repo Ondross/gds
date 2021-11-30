@@ -2,7 +2,6 @@ import {set, push, onValue, onChildAdded} from "./firebase.js";
 let room;
 let content = document.getElementById('content')
 const now  = new Date();
-console.log(now.getMonth())
 let date = now.getFullYear().toString() + '-' + (now.getMonth()+1).toString() + '-' + now.getDate().toString()  ;
 let affirmations = ['Everything is fine']
 
@@ -10,6 +9,10 @@ const params = new URLSearchParams(window.location.search)
 for (const value of params.values()) {
     room = value;
 }
+
+document.getElementById('fname').value = localStorage.getItem('firstName')
+document.getElementById('lname').value = localStorage.getItem('lastName')
+
 
 function sound(src) {
     this.sound = document.createElement("audio");
@@ -38,22 +41,20 @@ function reset (){
   set('contact-tracing', null)
 }
 
-function capitalize(word) {
-  return word[0].toUpperCase() + word.slice(1).toLowerCase();
-}
 
 document.getElementById('submit').onclick = function(){
-    let email = document.getElementById('email').value;
     let firstName = document.getElementById('fname').value; 
     let lastName = document.getElementById('lname').value;
-    console.log(lastName)
-    let person = capitalize(firstName) + '-' + capitalize(lastName);
+
+    localStorage.setItem('firstName', firstName)
+    localStorage.setItem('lastName', lastName)
+
+    let person = cleanWord(firstName) + ' ' + cleanWord(lastName);
     let pathRoom = 'contact-tracing/byPerson/' + person + '/' + date;
     let pathUser = 'contact-tracing/users/' + person;
     let pathDate = 'contact-tracing/byDate/' + room + '/' + date + '/' + person;
     
-    set(pathUser, {firstName: firstName, lastName: lastName, email: email})
-    console.log('byPerson'[person])
+    set(pathUser, {firstName: firstName, lastName: lastName})
     onValue('contact-tracing', callback)
     set(pathRoom, room)
     set(pathDate, true)

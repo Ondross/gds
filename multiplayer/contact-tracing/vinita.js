@@ -4,8 +4,20 @@ let rooms = {};
 let people = {};
 let peopleList = [];
 
+let startInput = document.getElementById('start')
+let endInput = document.getElementById('end')
+let now = new Date
+let date = now.getFullYear().toString() + '-' + (now.getMonth()+1).toString() + '-' + now.getDate().toString()
+
+let today = new Date()
+let endDate = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
+today.setDate(today.getDate() - 7)
+let aWeekAgo = today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate();
+startInput.value = aWeekAgo;
+endInput.value = endDate
+
 function getDates (startDate, endDate) {
-    let start = startDate.split('-');
+    let start = startDate.split('-')
     let end = endDate.split('-');
     let startDateFinal = [];
     let endDateFinal = [];
@@ -82,8 +94,8 @@ function display(exposed, allPeople, person){
   for (let i =0; i< allPeople.length; i++){
     if (allPeople[i] != person){
       let nameNode = document.createTextNode(allPeople[i].replace("-", ' ') + ', ')
-    bodyDiv.appendChild(nameNode)
-  }
+      bodyDiv.appendChild(nameNode)
+    }
   }
 
   let keys = Object.keys(exposed);
@@ -142,19 +154,15 @@ async function getRooms(dates, person){
 submit.onclick = function(){
     let firstName = document.getElementById('fname').value; 
     let lastName = document.getElementById('lname').value;
-    let person = firstName + '-' + lastName;
+    let person = cleanWord(firstName) + ' ' + cleanWord(lastName);
 
     let startInput = document.getElementById('start').value;
     let endInput = document.getElementById('end').value
 
     let dates = getDates(startInput, endInput).map(date => date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate())
     console.log('dates', dates)
-    console.log('function', getRooms(dates, person))
     getRooms(dates, person)
     //console.log('people', getPeople(dates, rooms))
-    
-    
-
 }
 
   
