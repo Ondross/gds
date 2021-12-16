@@ -357,7 +357,7 @@ setInterval(function(){
     }
     // console.log(enemies)
     }
-}, 1400 - enemyTimeDecrease)
+}, 900 - enemyTimeDecrease)
 
 setInterval(function(){
     if(gameStarted){
