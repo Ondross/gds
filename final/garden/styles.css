@@ -1,0 +1,116 @@
+.background-image{
+    position:absolute;
+}
+
+.plant-div{
+    width: 150px;
+    height: 75px;
+    background-size: cover;
+    position: relative;
+}
+
+.bed{
+    width: 300;
+    height: 150;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    background-image: url("https://docs.google.com/drawings/d/e/2PACX-1vSRYBE6iRBpmubXsmQW7Ns7jUUADZ-wMO48cIcBH9W8P7dmF5WAEgnjAmCiHtDlDs3L0b2iSKPVHuc9/pub?w=801&h=399");
+    background-size: cover;
+    
+}
+
+.garden-div{
+    display: flex;
+
+}
+#beds-div{
+    width:90%;
+    background-image: url(background.gif);
+    background-size: cover;
+    background-position: bottom;
+}
+#main-div{
+    display: flex;
+    height: 100%;
+
+}
+#garden-div{
+    width: 90%;
+    height: 100%;
+    padding: 30px;
+}
+
+.bed-row{
+    display: flex;
+}
+
+#side-bar{
+    width: 10%;
+    height: 100%;
+    background-color: white;
+    border: 3px solid darkolivegreen;
+    position: relative;
+}
+
+.action{
+    width: 75%;
+    height: auto;
+    padding: 10%;
+}
+
+#header{
+    display:flex;
+    background: lightgray;
+}
+
+.counter{
+    padding: 5px 10px;
+
+}
+
+.popout-div{
+    height: 100%;
+    position: absolute;
+    width: 100px;
+    background:rgb(134, 156, 97);
+    right: 100%;
+    color: white;
+    border: 3px solid darkolivegreen;
+}
+
+.popout-option{
+    width: 90%;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid darkolivegreen;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.counter-img{
+    background: greenyellow;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.error{
+    position:absolute;
+    background: orange;
+    border: 2px rgb(231, 68, 3);
+    width: 80px;
+    height: 30px;
+}
+
+.harvest-error{
+    position:absolute;
+    background: greenyellow;
+    border: 2px rgb(6, 116, 34)yellow;
+    width: 80px;
+    height: 30px;
+}

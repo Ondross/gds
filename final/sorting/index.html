@@ -1,0 +1,160 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script src="Bar.js"></script>
+    <script>
+    
+    //const barNum = 20
+    let barNum = prompt("How Many Numbers to Sort (maximum 25)?", "20")
+    //total number of bars to be sorted, de facto is 20
+    let speed = prompt("How Fast Animations (milliseconds)?", "10")
+    //speed of animation, de facto is 10
+    const bars = []
+    //array of bars
+    let instructions = []
+    //intructions in the form of pairs
+    let swapNum = 0
+    //total number of swaps - will be updated
+    let compNum = 0
+    //total number of comparisons - will be updated
+    let sel
+    //dropdown menu variable
+    
+    function setup(){
+        createCanvas(windowWidth, windowHeight)
+        for(let i=0; i<barNum; i++){
+            bars.push(new Bar(i+1, i))
+            //adding bars of correct weights
+        }
+        sel = createSelect();
+        sel.position(1010, 100);
+        sel.option('bubbleSort');
+        sel.option('insertionSort');
+        sel.option('selectionSort');
+        sel.selected('bubbleSort');
+        sel.changed(mySelectEvent);
+        //create dropdown menu with items
+        drawtime()
+        //load background
+        texto(('Swaps: '+ swapNum), 30)
+        textSize(20)
+        fill(0, 100, 103)
+        text('R to reverse, SHIFT to randomize, and ENTER to sort', 70, 70)
+        //instructions disappear when user starts
+
+    }
+
+    function drawtime(){
+        background('white')
+        //background
+        stroke('black')
+        //bar outline
+        let c = color('orange')
+        //bar color
+        fill(c)
+        //fill the bars
+        for(let i =0; i<barNum; i++){
+            console.log(bars[i])
+            rect(i*20 + 300, windowHeight-bars[i].H-200, 20, bars[i].H)
+            //Displaying bars
+        }
+    }
+
+    function highlight(loc1, loc2){
+        //highlighting specific bars
+        let light = color('green')
+        //highlight color
+        fill(light)
+        rect(loc1*20+300, windowHeight-bars[loc1].H-200, 20, bars[loc1].H)
+        rect(loc2*20+300, windowHeight-bars[loc2].H-200, 20, bars[loc2].H)
+        //creates new bars of same dimensions and same location, but now in 'light' color
+        console.log('highlight', loc1, ' ', loc2)
+    }
+
+    function texto(str, n){
+        textSize(32)
+        fill(0, 102, 153)
+        text(str, 1000, n)
+        //create string of specific size, color, and placement
+    }
+
+    function randomSwap(){
+        console.log('randomize');
+        for(let i=0; i<50 ; i++){
+            Swap(randomPick(barNum), randomPick(barNum), bars)
+        }
+        //Makes i random swaps
+        drawtime()
+        //reload images
+        texto(('Swaps: '+ swapNum), 30)
+    }
+
+    function mySelectEvent() {
+        let method = sel.value();
+    //dropdown menu stuff
+    }
+
+    function keyPressed(){
+        swapNum = 0
+        instructions = []
+        //resetting everything
+        if(keyCode === SHIFT){
+            randomSwap()
+            //reset on SHIFt key
+        }
+        if(keyCode === 82){
+            for(let i = 0; i < barNum/2; i++){
+                Swap(i, barNum-1-i, bars)
+            }
+            //reverse bars array
+        }
+        if (keyCode === RETURN) {
+            let method = sel.value();
+            //selecting sorting method
+            if(method == 'insertionSort'){
+                compNum = insertionSort(bars, instructions)
+            //run insertionSort
+            }
+            if(method == 'bubbleSort'){
+                compNum = bubbleSort(bars, instructions)
+            //run bubbleSort
+            }
+            if(method == 'selectionSort'){
+                compNum = selectionSort(bars, instructions)
+            //run selectionSort
+            }
+            console.log("intructions", instructions, ' ', instructions.length)
+            for(let i = 0; i < instructions.length; i++){
+                setTimeout(function() {
+                    Swap(instructions[i].s1, instructions[i].s2, bars);
+                    //do swap
+                    drawtime();
+                    //redraw bars
+                    highlight(instructions[i].s1, instructions[i].s2);
+                    //highlight specific bars
+                    swapNum = swapNum+1;
+                    //uptick swapNum
+                    texto(('Swaps: '+ swapNum), 30);
+                    //display swampNum
+                    if(i == instructions.length-1){
+                        drawtime()
+                        texto(('Swaps: '+ swapNum), 30)
+                        texto(('Comparisons: '+ compNum), 70)
+                        //make sure to remove highlights and display swapNum on last iteration
+                    }
+                }, i * speed)
+                //timing stuff should work and such
+            }
+        }
+        drawtime()
+        texto(('Swaps: '+ swapNum), 30)
+    }
+
+
+</script>
+ </head>
+ <body>
+   <main>
+   </main>
+ </body>
+</html>

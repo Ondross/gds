@@ -1,0 +1,40 @@
+span {
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+
+#healthbar{
+    height: 20px;
+    width: 1000px;
+    background: limegreen;
+}
+
+#healthContainer{
+    height: 20px;
+    width: 1000px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.toTheRight{
+    display: flex;
+    margin-left: 20px;
+}
+
+.topBar{
+    display: flex;
+}
