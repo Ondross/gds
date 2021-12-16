@@ -1,0 +1,625 @@
+/*Everything*/
+.welcome-banner{
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 12px;
+    position: absolute;
+    left: 400;
+    top: 220;
+    font-size: 30px;
+}
+
+.login{
+    display: inline-block;
+    margin: 5px;
+    background: rgb(6, 241, 6);
+    border: solid 1px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    position: absolute;
+    left: 550;
+    top: 300;
+    width: 100;
+    padding-left: 70;
+}
+
+.jargonheader{
+    display:none;
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: 5px;
+    color: white;
+
+}
+
+
+#everything {
+    display: none;
+}
+
+.sidebar {
+    background: black;
+    padding: 20px;
+    flex: 0 0 160px;
+}
+
+.chatname{
+    padding: 10px;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    opacity: 1;
+}
+
+
+
+
+
+/*Chat Stuff*/
+.chatroomheader{
+    display: flex;
+
+}
+
+.chatrooms {
+    display: flex;
+    flex: 0 1 auto;
+    overflow: scroll;
+}
+
+.darkmode .chatrooms{
+    background: rgb(58, 58, 58);
+}
+
+.lightmode .chatrooms{
+    background: white;
+}
+
+.chatroom{
+    padding: 20px;
+    border: 3px solid;
+    flex: 0 0 auto;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    background:grey;
+    border-color: grey;
+    box-shadow: 16px 16px black;
+
+}
+
+
+.in{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 0px 0px, 5px 5px black;
+    border-color: white;
+}
+
+
+
+
+
+
+/*Image Upload*/
+.imageupload{
+    display: none;
+}
+
+.imageuploadlabel{
+    text-align: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3px;
+    width: fit-content;
+    color: black;
+    background: cyan;
+    box-shadow: 1px 1px, 3px 3px black;
+    margin-top: 8px;
+}
+
+.imagesubmitbutton{
+    display:none;
+    text-align: left;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 3px;
+    width: fit-content;
+    background: lightgreen;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+.image{
+    width: 100px
+}
+
+
+
+
+
+/*Chatroom Settings*/
+.ico{
+    width: 18px;
+    padding: 2px;
+}
+
+.menucontainer{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid;
+    border-radius: 50%;
+    background: white;
+    box-shadow: .5px .5px, 1.5px 1.5px black;
+}
+
+.menu{
+    display: none;
+    padding: 20px;
+    border: 3px solid;
+    flex: 0 0 auto;
+    width: 500px;
+    text-align: center;
+    font-size: 20px;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    box-shadow: 16px 16px black;
+}
+
+.menubackbutton{
+    font-size: 18px;
+    right: 45%;
+    position: relative;
+    color: black;
+    text-decoration: underline;
+}
+
+.settingsholder{
+    margin-top: 10px;
+}
+
+
+.backgroundcolorsettings{
+    margin-top:10px;
+    text-align: center;
+    display: inline-block;
+    color:black;
+}
+
+.backgroundcolorscontainer{
+    width:100%;
+}
+
+.backgroundcolor{
+    border: 1px solid;
+    padding: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    color: black;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+
+.textcolorsettings{
+    margin-top:10px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 10%;
+    color: black;
+}
+
+.textcolorscontainer{                 
+    width: 100%;
+}
+
+.textcolor{
+    border: 1px solid;
+    padding: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    color: black;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+.bordertypesettings{
+    margin-top:10px;
+    text-align: center;
+    display: inline-block;
+    color:black;
+    margin-right: 50%;
+}
+
+.bordertypecontainer{
+    width:100%;
+}
+
+.bordertypesquare{
+    border: 1px solid;
+    padding: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    width: fit-content;
+    color: black;
+    background: lightgrey;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+.bordertyperound{
+    border: 1px solid;
+    padding: 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    background: lightgrey;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+
+
+
+
+
+/*Message Stuff*/
+.chatbox{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid;
+    width: 500px;
+    flex-direction: column;
+    height:fit-content;
+    max-height: 200px;
+    display: flex;
+    overflow: scroll;
+
+}
+
+.messagebox{
+    height: fit-content;
+    background: white;
+}
+
+.message{
+    font-size: 20px;
+    background: white;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+/*Everything Else*/
+
+#everythingelse{
+    display: none;
+}
+
+.createstuff{
+    display:flex;
+}
+
+.darkmode .createchannel {
+    margin-top: 10px;
+    background: skyblue;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    color:white;
+    font-size: 20px;
+    box-shadow: 1px 1px white, 3px 3px white;
+}
+
+.lightmode .createchannel {
+    margin-top: 10px;
+    background: skyblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    color:white;
+    font-size: 20px;
+    box-shadow: 1px 1px black, 3px 3px black;
+}
+
+.darkmode .newemotecontainer {
+    margin-top: 10px;
+    margin-left: 10px;
+    background: skyblue;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    color:white;
+    font-size: 20px;
+    box-shadow: 1px 1px, 3px 3px white;
+}
+
+.lightmode .newemotecontainer {
+    margin-top: 10px;
+    margin-left: 10px;
+    background: skyblue;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    color:white;
+    font-size: 20px;
+    box-shadow: 1px 1px black, 3px 3px black;
+}
+
+.newchannelin{
+    display:none;
+}
+
+.newemotefile{
+    display: none;
+}
+
+.newemotename{
+    display: none;
+}
+
+.logout{
+    background: red;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 6px;
+    color:black;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+
+.passwordcontainer{
+    display: none;
+    width: 100%;
+    position:absolute;
+    left: 45%;
+    top: 45%;
+    font-size: 25px;
+
+}
+
+.password{
+    margin-top:20px;
+}
+
+
+/*General Settings*/
+
+.settingsbutton{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 10px;
+    background: white;
+    padding: 6px;
+    width: fit-content;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 1px 1px, 3px 3px black;
+}
+
+#settingswindow{
+    display:none;
+}
+
+.backbutton{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.settingswindowheader{
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.settingscontainer{
+    width: 100%;
+    height: fit-content;
+    flex: 0 0 auto;
+    text-align: center;
+    font-size: 25px;
+    display: inline-flex;
+}
+
+.displaysection {
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    width: fit-content;
+    margin: auto;
+}
+
+#darkmode{
+    margin-top: 40px;
+    font-size: 20px;
+    display:flex;
+}
+
+#lightmode{
+    margin-top: 40px;
+    font-size: 20px;
+    display:flex;
+}
+
+.textcolorsettings-gen{
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+    color: black;
+    width:fit-content;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.textcoloroption{
+    font-size: 25px;
+    margin-top:10px;
+    margin-left: 5px;
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+
+
+/*Switches*/
+
+.switch {
+    position: relative;
+    top: -5;
+    left: 10;
+	display: block;
+	vertical-align: top;
+	width: 100px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF 25px);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF 25px);
+	border-radius: 18px;
+	box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	box-sizing:content-box;
+}
+.switch-input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	box-sizing:content-box;
+}
+.switch-label {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: #eceeef;
+	border-radius: inherit;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+	box-sizing:content-box;
+}
+.switch-label:before, .switch-label:after {
+	position: absolute;
+	top: 50%;
+	margin-top: -.5em;
+	line-height: 1;
+	-webkit-transition: inherit;
+	-moz-transition: inherit;
+	-o-transition: inherit;
+	transition: inherit;
+	box-sizing:content-box;
+}
+.switch-label:before {
+	content: attr(data-off);
+	right: 11px;
+	color: #aaaaaa;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+.switch-label:after {
+	content: attr(data-on);
+	left: 11px;
+	color: #FFFFFF;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label {
+	background: rgb(58, 57, 57);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.switch-input:checked ~ .switch-label:before {
+	opacity: 0;
+}
+.switch-input:checked ~ .switch-label:after {
+	opacity: 1;
+}
+.switch-handle {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background: linear-gradient(to bottom, #FFFFFF 40%, #f0f0f0);
+	background-image: -webkit-linear-gradient(top, #FFFFFF 40%, #f0f0f0);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.switch-handle:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -6px 0 0 -6px;
+	width: 12px;
+	height: 12px;
+	background: linear-gradient(to bottom, #eeeeee, #FFFFFF);
+	background-image: -webkit-linear-gradient(top, #eeeeee, #FFFFFF);
+	border-radius: 6px;
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+}
+.switch-input:checked ~ .switch-handle {
+	left: 74px;
+	box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Transition
+========================== */
+.switch-label, .switch-handle {
+	transition: All 0.3s ease;
+	-webkit-transition: All 0.3s ease;
+	-moz-transition: All 0.3s ease;
+	-o-transition: All 0.3s ease;
+}
+
+
+
+/*General Settings*/
+
+
+
+
+
+/*Ban stuff*/
+
+.banpage{
+    display: none;
+}
+
+.banmessage{
+    width: 100%;
+    left: 50%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+}

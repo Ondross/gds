@@ -1,0 +1,100 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fafafa;
+}
+
+#start-buttons {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.score-container-div {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-left:20px;
+    padding-right: 7px;
+    background-color: oldlace;
+    width: min-content;
+    border-radius: 10px;
+    
+}
+
+.name-div {
+    background-color: olivedrab;
+    margin: 10px;
+}
+
+.score-div {
+    background-color: oldlace;
+}
+
+.leaderboard-name {
+    background-color: oldlace;
+    margin: 10px;
+    color: olivedrab;
+}
+
+.vote-button {
+    margin-right: 5;
+    margin-left: 5;
+}
+
+#leaderboard {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: olivedrab;
+    width: 300px;
+    border-radius: 20px;
+}
+
+#player-list {
+    display: flex;
+    border-radius: 5px;
+    color: oldlace;
+    background-color: olivedrab;
+    width: 400px;
+    height: 200;
+    padding: 10px;
+}
+
+#timer {
+    font-size: 30px;
+    color: orange;
+    border-color: #333232;
+    border-style: solid;
+    width: min-content;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#next-button {
+   padding-top: 5px; 
+}
+
+#game-setup {
+    padding: 5px;
+}
+
+#general-input {
+    padding: 10px;
+    background-color: olivedrab;
+    width: min-content;
+    border-radius: 10px;
+}
+
+#vote {
+    margin-top: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 2.5;
+    padding-right: 2.5;
+    width: min-content;
+    background-color: olivedrab;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+

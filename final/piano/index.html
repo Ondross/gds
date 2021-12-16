@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <link id = "theme" rel="stylesheet" href="light.css" />
+
+</head>
+
+<body>
+    <div class = "buttons">
+        <button onclick="toggleTheme('light.css')">
+            Blue
+        </button>
+          
+        <button onclick="toggleTheme('red.css')">
+            Red
+        </button>
+          
+        <button onclick="toggleTheme('bold.css')">
+            Neon
+        </button>
+          
+        <button onclick="toggleTheme('mystery.css')">
+            pastel
+        </button>
+
+    </div>
+    <div class = "header">
+        <h1>
+            Music Maker!
+        </h1>
+        
+       
+        
+    </div>
+    <div class="top">
+        <div class = "replay" id = "replay" onclick=startPlaying()>
+            Play
+        </div>
+
+
+
+        <div class = "reset" id = "reset" onclick=reset()>
+            Reset
+        </div>
+        
+    </div>
+
+    <div class = "middle">
+        <img class = "staff" src = "TrebleStaff.jpg"/>
+
+        <div class = "drawings">
+            
+        </div>
+        
+        <!-- <div class="circle"></div> -->
+
+      
+
+    </div>
+
+
+    <div id="bottomContainer" class="bottom">
+        <div id="keys" class="keys">
+            <div class="natural" id="C">
+                <h1>C</h1>
+            </div>
+
+            <div class="sharp" id="Cs">
+                <h1>C# <br> Db</h1>
+            </div>
+
+            <div class="natural" id="D">
+                <h1>D</h1>
+            </div>
+
+            <div class="sharp" id="Ds">
+                <h1>D# <br> Eb</h1>
+            </div>
+
+            <div class="natural" id="E">
+                <h1>E</h1>
+            </div>
+
+            <div class="natural" id="F">
+                <h1>F</h1>
+            </div>
+
+            <div class="sharp" id="Fs">
+                <h1>F# <br> Gb</h1>
+            </div>
+
+            <div class="natural" id="G">
+                <h1>G</h1>
+            </div>
+
+            <div class="sharp" id="Gs">
+                <h1>G# <br> Ab</h1>
+            </div>
+
+            <div class="natural" id="A">
+                <h1>A</h1>
+            </div>
+
+            <div class="sharp" id="As">
+                <h1>A# <br> Bb</h1>
+            </div>
+
+            <div class="natural" id="B">
+                <h1>B</h1>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</body>
+<script src="GetGoing.js"></script>
+
+</html>

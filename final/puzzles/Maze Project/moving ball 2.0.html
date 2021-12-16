@@ -1,0 +1,42 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+  
+  
+    let x = 100
+    let y = 100
+
+
+
+    function setup() {
+    createCanvas(800, 500)
+   }
+
+    function draw() {
+    background(0)
+    fill(255, 0, 0)
+    circle(x, y, 25)
+  
+  
+  if (keyIsDown(LEFT_ARROW)) {
+    x = x - 5
+  }
+  if (keyIsDown(RIGHT_ARROW)) {
+    x = x + 5
+  }
+  if (keyIsDown(UP_ARROW)) {
+    y = y - 5
+  }
+  if (keyIsDown(DOWN_ARROW)) {
+    y = y + 5
+  }
+}
+   </script>
+ </head>
+ <body>
+   Moving ball 2.0
+   <main>
+   </main>
+ </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <div id = "container">
+            <div id = "child1">
+                abc
+            </div>
+            <div id = "child2">
+                123
+            </div>
+        </div>
+    </body>
+   <script>
+       document.getElementById("child1").innerHTML = "xyz"
+       document.getElementById("child2").style.background = 'blue'
+       document.getElementById("child2").style.fontSize = 30
+    
+        words = {"apple":5,
+        "pear": 3, 
+        "pineapple":20,
+        6: 40}
+
+
+      
+        for (let i = 0; i < Object.keys(words).length; i++){
+          let newdiv = document.createElement("div")
+          document.getElementById("container").appendChild(newdiv)
+
+          word = Object.keys(words) [i] 
+          newdiv.innerHTML = word
+          newdiv.style.fontSize = words[word]
+
+
+          newdiv = document.createElement("div")
+          document.getElementById("container").appendChild(newdiv)
+
+          word = Object.keys(words) [i] 
+          newdiv.innerHTML = word
+          newdiv.style.fontSize = words[word]
+
+       }
+      
+      for (let i = 0; i < Object.keys(words).length; i++){
+         let newdiv = document.createElement("div")
+         document.getElementById("container").appendChild(newdiv)
+
+         word = Object.keys(words) [i] 
+         newdiv.innerHTML = word
+         newdiv.style.fontSize = words[word]
+
+
+         newdiv = document.createElement("div")
+         document.getElementById("container").appendChild(newdiv)
+
+         word = Object.keys(words) [i] 
+         newdiv.innerHTML = word
+         newdiv.style.fontSize = words[word]
+
+      }
+
+  
+  
+  </script>
+             
+</html>

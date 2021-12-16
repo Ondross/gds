@@ -1,0 +1,73 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+
+ 
+ 
+   </script>
+ </head>
+ <body>
+   Drawing Machine lab
+   <main>
+
+
+   </main>
+   <button id="small-brush"style="height:200px; width:200px;">
+    </body>button
+
+
+
+<body>
+</button> 
+
+<button id="medium-brush"style="height:200px; width:200px;">    
+ 
+</button>
+ </body> big  button
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+
+    radius = 50
+       let xvalues = []
+       let yvalues = [] 
+     
+     function makeBrushSmall(){
+        radius = radius -5;
+
+     }
+     function makeBrushBig(){
+         radius = radius + 5;
+     }
+       
+     
+     function setup() {
+         createCanvas(10000, 600)
+
+
+     }
+ 
+     function draw() { 
+ 
+	  background("black")
+        
+        yvalues.push(mouseY)
+        xvalues.push(mouseX)
+        for(let i = 0; i < xvalues.length; i++){
+            circle(xvalues[i], yvalues[i], radius)
+        }
+     fill(Date.now()/200%255, 29 , 206)
+     
+        
+     } 
+     document.getElementById("small-brush").onclick = makeBrushSmall
+     document.getElementById("medium-brush").onclick = makeBrushBig
+
+ 
+   </script>
+</html>

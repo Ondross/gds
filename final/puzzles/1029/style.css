@@ -1,0 +1,13 @@
+.row{
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.day{
+    border: solid 1px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+

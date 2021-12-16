@@ -1,0 +1,149 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="indexStyles.css">
+        <script type="module" src="firebase.js"></script>
+        <script type="module" src="script.js"></script>
+        <script type="module" src="initializeEverything.js"></script>
+        <script type="module" src="loadEverything.js"></script>
+        <script type="module" src="chatroom.js"></script>
+        <script type="module" src="createChatroomInHTML.js"></script>
+        <script type="module" src="script.js"></script>
+        <script type="module" src="commands.js"></script> 
+        <script type="module" src="Auth.js"></script>
+    </head>
+
+    <body>
+        <div class='welcomebanner'>
+            Welcome to Jargon (Beta - v3.3)
+        </div>
+
+        <div class='login'>
+            Login
+        </div>
+
+        <div class="jargonheader lightmode">Jargon (Beta - v3.3)</div>
+
+        <div id="everything" class='lightmode'>
+
+            <div class="sidebar">
+            </div>
+
+            <div class="chatrooms">
+             
+            </div>
+        </div>
+
+        <div id="everythingelse" class="lightmode">
+            <div class="createstuff">
+                <div class="createchannel lightmode">
+                    Create Channel
+        
+                    <input type="text" class='newchannelin'/>
+                </div>
+        
+                <div class="newemotecontainer lightmode">
+                    <label for="newemotefile" class="newemotelabel">
+        
+                        <input type="file" id="newemotefile" class='newemotefile'/>
+                            New Emote
+                    </label>
+        
+                    <input type="text" class="newemotename"/>
+                </div>
+            </div>
+    
+            <div class='logout'>
+                Logout
+            </div>
+    
+    
+            <div class="settingsbutton">
+                <img class="image" src="https://drewmax.net.pl/wp-content/uploads/2019/10/configuration-icon-1.png"/>
+            </div>
+
+            
+        </div>
+
+        <div id="settingswindow" class='lightmode'>
+            <div class="backbutton">
+                <u>
+                    Back
+                </u>
+            </div>
+
+            <div class="settingswindowheader">
+                <u>
+                    Settings
+                </u>
+            </div>
+
+            <div class="settingscontainer">
+                <div class='displaysection'>
+                    <u>
+                        Display:
+                    </u>
+                    <div id="darkmode">
+                        Dark Mode:
+    
+                        <label class="switch">
+                            <input class="switch-input" type="checkbox" />
+                            <span class="switch-label" data-on="On" data-off="Off"></span> 
+                            <span class="switch-handle"></span> 
+                            
+                        </label>
+                    </div>
+                    
+        
+                    <div id="lightmode">
+                        Light Mode:
+    
+                        <label class="switch">
+                            <input class="switch-input" type="checkbox" />
+                            <span class="switch-label" data-on="On" data-off="Off"></span> 
+                            <span class="switch-handle"></span> 
+                            
+                        </label>
+                    </div>
+                </div>
+    
+                <div class="textcolorsettings-gen">
+                    <div class='textcolorheader'><u>Text Color:</u></div>
+                    <div class="textcolorinnercontainer">
+                        <div class='textcoloroption'>Blue</div>
+    
+                        <div class='textcoloroption'>Red</div>
+                    </div>
+                    <div class=textcolorinnercontainer>
+                        <div class='textcoloroption'>Green</div>
+    
+                        <div class='textcoloroption'>Black</div>
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="passwordcontainer">
+            <div id="wrathtext" style="width: 100%; position: relative; right: 25%">
+                You are about to delete all of the data in Jargon. If you are prepared to proceed... enter the Password please:
+            </div>
+            <input type="text" class="password"/>
+        </div>
+
+
+
+
+
+
+
+        <div class='banpage'>
+            <div class='banmessage'>
+                You've Been Banned (lmao)
+            </div>
+        </div>
+        
+    </body>
+</html>

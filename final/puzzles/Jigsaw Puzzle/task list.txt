@@ -1,0 +1,35 @@
+// to do: add images, xysolutions, check for completion, snapping, multiplayerv1 (observing), multiplayerv2, html
+
+
+tues:
+images, snapping, xy solutions
+
+thurs:
+check for completion and html, multiplayerv1
+
+mon:
+multiplayerv2
+
+
+
+
+
+<html>
+  <head>
+    Williams 
+  </head>
+  <body>
+    <img src="earth image.jpeg" alt="Jigsaw"/>
+    <area shape = 'rect' coords="22,83,126,125" alt="Jigsaw Puzzles"
+      href="Jigsaw Puzzle/drag.html" target="_blank"/>
+    
+      <area shape = 'rect' coords="222,283,326,325" alt="Hole in the Wall"
+      href="hole in the wall/hole in the wall.html" target="_blank"/>
+
+      <area shape = 'rect' coords="622,683,726,725" alt="Escape the Maze"
+      href="Maze Project/maze game.html" target="_blank"/>  
+ 
+    </body>
+</html>
+
+

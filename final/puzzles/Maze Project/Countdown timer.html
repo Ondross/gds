@@ -1,0 +1,35 @@
+<html>
+ <head>
+   <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+   <script>
+ 
+   let timer = 30
+
+function setup() { 
+  createCanvas(500, 400);
+} 
+
+function draw() { 
+  background(220);
+  textAlign(CENTER, CENTER);
+  textSize(70);
+  text(timer, 50, 50);
+  
+  
+  if (frameCount % 60 == 0 && timer > 0) { 
+    timer --;
+  }
+  if (timer == 0) {
+    text("YOU LOSE", width/2, height*0.7);
+  }
+  
+}
+ 
+   </script>
+ </head>
+ <body>
+   Countdown timer 
+   <main>
+   </main>
+ </body>
+</html>

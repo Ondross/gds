@@ -1,0 +1,141 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="indexStyles.css">
+        <script type="module" src="firebase.js"></script>
+        <script type="module" src="script.js"></script>
+        <script type="module" src="commands.js"></script> 
+        <script type="module" src="Auth.js"></script>
+    </head>
+
+    <body>
+        <div id='welcome-banner'>
+            Welcome to Jargon (Alpha - v4.1.6)
+        </div>
+
+        <div id='login' onlick="getUser()">
+            Login
+        </div>
+
+        <div id="literally-everything" class="lightmode">
+
+
+            <div id="Welcome">
+                Jargon (Alpha - v4.1.6)
+            </div>
+
+            <select id="chatrooms-list">
+                <option id="The Foyer" class="chatroomOption">The Foyer</option>
+                <option id="The Living Room" class="chatroomOption">The Living Room</option>
+                <option id="The Dining Room" class="chatroomOption">The Dining Room</option>
+                <option id="The Bathroom" class="chatroomOption">The Bathroom</option>
+            </select>
+
+            <div id="foo">
+                Chatroom
+            </div>
+
+            <div id="allmessagesboxes">
+            </div>
+
+            <div id="chat-box-container">
+                <label for="choosefile" id="filepickerlabel">
+
+                    <input type="file" id="choosefile"/>
+                    Upload Image
+                </label>
+        
+                <div id="filesubmitlabel">
+                    Send Image
+                </div>
+
+                <input id="in" type="text"/>
+            </div>
+
+            <div id="create-channel">
+                Create Channel
+            </div>
+
+            <div id="new-channel-name-text">
+                New Channel
+            </div>
+
+            <div id="new-emote-container">
+                <label for="new-emote-file" id="new-emote-label">
+
+                    <input type="file" id="new-emote-file"/>
+                    New Emote
+                </label>
+
+                <input type="text" id="new-emote-name"/>
+            </div>
+
+            <input type="text" id="new-channel-name"/>
+
+            <div id='logout'>
+                Logout
+            </div>
+
+            <div id="settings-header">
+                Settings
+            </div>
+
+            <div id="settings-container">
+                <img id="settings" class="icon" src="https://drewmax.net.pl/wp-content/uploads/2019/10/configuration-icon-1.png"/>
+            </div>
+
+        </div>
+
+        <div id="settings-window" class='lightmode'>
+            <div id="back-button" class="settings-option">
+                <u>
+                    --Back--
+                </u>
+            </div>
+
+            <div id="settings-window-header" class='settings-option'>
+                <u>
+                    Settings
+                </u>
+            </div>
+
+            <div id='display-section' class='settings-option'>
+                <u>
+                    Display
+                </u>
+            </div>
+
+            <div id="darkmode">
+                Dark Mode
+            </div>
+
+            <div id="lightmode">
+                Light Mode
+            </div>
+
+            <div id="text-color-header" class='lightmode'>
+                <u>
+                    Text Color
+                </u>
+
+                <div id='bluetext' class='text-color-option'>
+                    Blue
+                </div>
+
+                <div id='redtext' class='text-color-option'>
+                    Red
+                </div>
+
+                <div id="greentext" class='text-color-option'>
+                    Green
+                </div>
+
+                <div id="blacktext" class='text-color-option'>
+                    Black
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+</html>

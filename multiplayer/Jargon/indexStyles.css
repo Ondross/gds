@@ -1,0 +1,281 @@
+#literally-everything{
+    display: none;
+}
+
+
+#allmessageboxes{
+    position:absolute;
+}
+
+.message{
+    color: black;
+}
+
+.image {
+    width: 100px;
+}
+
+#choosefile{
+    position: relative;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+#filepickerlabel {
+    margin-top: 1px;
+    border: solid 1px;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+}
+
+#filesubmitlabel {
+    margin-top:20px;
+    display: none;
+    border-radius: 10px;
+    border: solid 1px;
+    padding: 6px 12px;
+}
+
+#in{
+    display: inline;
+    border-radius: 3px;
+    margin: 10px;
+    border: solid 2px black;
+}
+
+#new-channel-name{
+    display: none;
+    margin-top: 100px;
+
+}
+
+#new-channel-name-text{
+    display: none;
+    margin-top: 100px;
+}
+
+#create-channel{
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background: lightblue;
+    border: solid 1px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#chatrooms-list{
+    margin-bottom:10px;
+}
+
+#welcome-banner{
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 12px;
+    position: absolute;
+    left: 400;
+    top: 220;
+    font-size: 30px;
+}
+
+#login{
+    display: inline-block;
+    margin: 5px;
+    background: rgb(6, 241, 6);
+    border: solid 1px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    position: absolute;
+    left: 550;
+    top: 300;
+    width: 100;
+    padding-left: 70;
+}
+
+#logout{
+    display: block;
+    margin-bottom: 8px;
+    background:red;
+    border: solid 1px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.text{
+    margin-top:3px;
+    margin-bottom:3px;
+}
+
+#foo{
+    font-size: 25px;
+    /* font-family: Luminari, fantasy; */
+    font: small-caps bold 16px/1; 
+}
+
+#Welcome{
+    font-size: 50px;
+    margin-bottom: 10px;
+    /* font-family: Luminari, fantasy; */
+    font: small-caps bold 16px/1; 
+}
+
+#new-channel-name{
+    margin-bottom: 20px;
+}
+
+#new-emote-file{
+    display: none;
+}
+
+#new-emote-container{
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    background: lightblue;
+    border: solid 1px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#new-emote-name{
+    display:none;
+}
+
+.icon{
+    width: 50px;
+    display: block;
+    padding: 5px;
+}
+
+#settings-header{
+    margin-left: 5px;
+}
+
+#settings-container{
+    border: solid 1px;
+    width: 60px;
+    border-radius: 9px;
+    width: fit-content;
+}
+
+#settings-window{
+    display: none;
+    white-space: nowrap;
+}
+
+.settings-option{
+    display: none;
+}
+
+#settings-window-header{
+    position: absolute;
+    left: 300px;
+    font-size: 40px;
+}
+
+#display-section{
+    position: absolute;
+    font-size: 30px;
+    top: 120px;
+    left: 120px;
+}
+
+#darkmode{
+    font-size: 15px;
+    position: absolute;
+    top:180px;
+    left: 160px;
+    padding: 6px 12px;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+#lightmode{
+    font-size: 15px;
+    position: absolute;
+    top:230px;
+    left: 160px;
+    padding: 6px 12px;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+#text-color-header{
+    position: absolute;
+    font-size: 30px;
+    top: 120px;
+    left: 420px;
+}
+
+#bluetext{
+    color: blue;
+    font-size: 25px;
+    margin-top:10px;
+    padding: 2px;
+}
+
+#redtext{
+    color: red;
+    font-size: 25px;
+    margin-top:5px;
+    padding: 2px;
+}
+
+#greentext{
+    color: green;
+    font-size: 25px;
+    margin-top:5px;
+    padding: 2px;
+}
+
+#blacktext{
+    color: black;
+    font-size: 25px;
+    margin-top:5px;
+    padding: 2px;
+}
+
+.text-color-option{
+    border: solid 1px;
+    width:fit-content;
+    height:fit-content;
+    border-radius: 10px;
+}
+
+
+/* color buttons */
+.darkmode #lightmode {
+    background: white;
+    color: black
+}
+.darkmode #darkmode {
+    background: black;
+    color: white;
+}
+.lightmode #darkmode {
+    background: white;
+    color: black
+}
+.lightmode #lightmode {
+    background: black;
+    color: white;
+}
+
+.darkmode .text-color-option{
+    background: grey;
+}
+
+.darkmode .text-color-option{
+    background: grey;
+}

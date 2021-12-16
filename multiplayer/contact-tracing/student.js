@@ -1,4 +1,21 @@
-import {set, push, onValue, onChildAdded} from "./firebase.js";
+import {set, push, onValue, onChildAdded, get} from "./firebase.js";
+
+window.get = get
+window.getCounts = async function() {
+  const fbData = await get('contact-tracing/byPerson')
+  const res = fbData.val()
+  const dates = {}
+  for (const person in res) {
+    for (date in res[person]) {
+      if (!dates[date]) {
+        dates[date] = []
+      }
+      dates[date].push(person)
+    }
+  }
+  return dates
+}
+
 let room;
 let content = document.getElementById('content')
 const now  = new Date();

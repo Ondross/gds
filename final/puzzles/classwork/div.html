@@ -1,0 +1,30 @@
+<html>
+    <body>
+
+    <div id = "container">
+    
+    </div>
+    
+    
+    
+    
+    </body>
+    <script>
+        let list1 = {
+            "hello":3, 
+            "bye":5}
+           
+        
+            for(let i in list1) {
+                let div = document.getElementById("container")
+                let newdiv = document.createElement("div")
+                newdiv.innerHTML = i
+                div.appendChild(newdiv)
+                newdiv.id = "div${i}"
+                newdiv.style.fontSize = list1[i] * 10 + "px"
+          
+            }
+
+             
+    </script>
+</html>
