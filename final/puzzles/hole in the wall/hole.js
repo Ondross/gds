@@ -81,7 +81,7 @@ console.log(mode)
 
     function repeat(){
         youWon = false
-        timer = 3
+        timer = 5
         initialize()     
     }
 
