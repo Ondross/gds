@@ -269,7 +269,7 @@ window.draw = function() {
                     img,
                     solution[0],
                     solution[1],
-                    index)
+                    index + "000" + images.length)
             })
         }
     }
