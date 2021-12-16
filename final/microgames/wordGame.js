@@ -88,7 +88,7 @@ function submitWord(word) {
 }
 
 function startWordGame() {
-    gameTimer(20) 
+    gameTimer(40) 
     document.getElementById('timer').style.visibility = "visible"
     if (gameState.role === "host") {
         updateLeaderboard()

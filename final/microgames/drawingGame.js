@@ -67,7 +67,7 @@ window.setup = () => {
 
 function startDrawingGame() {
     // create canvas and pen tool
-    gameTimer(20)
+    gameTimer(40)
     document.getElementById('timer').style.visibility = "visible"
 
     if (gameState.role === "client") {
