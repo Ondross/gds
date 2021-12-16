@@ -7,7 +7,7 @@ let s
 let randx
 let randy
 let randdiam
-let timer = 3
+let timer = 5
 let youWon = false
 let youLose = false
 let mode = 0

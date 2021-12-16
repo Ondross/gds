@@ -242,12 +242,12 @@ function displayError(type, number){
     } else if (type ==="soil"){
         let id = number + '-soil-error'
         document.getElementById(id).style.display = 'initial'
-        document.getElementById(id).innerHTML = "Depleated soil!"
+        document.getElementById(id).innerHTML = "Depleted soil!"
 
     } else if (type ==='harvest'){
         let id = number + '-harvest-error'
         document.getElementById(id).style.display = 'initial'
-        document.getElementById(id).innerHTML = "Harevst me!"
+        document.getElementById(id).innerHTML = "Harvest me!"
     }
     
 }
