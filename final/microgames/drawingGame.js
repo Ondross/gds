@@ -60,7 +60,7 @@ function gameTimer(time) {
 
 // can't figure out how to make canvas load anywhere other than window.setup
 window.setup = () => {
-    createCanvas(400, 400) 
+    createCanvas(800, 400) 
     stroke(randColor(), randColor(), randColor()) // random colored pens to differentiate players
     strokeWeight(4)
 }
